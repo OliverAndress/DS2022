@@ -1,0 +1,5 @@
+#!/bin/bash
+curl https://thumbs.dreamstime.com/b/image-depicts-vibrant-dynamic-scene-featuring-variety-sports-balls-including-basketball-soccer-ball-football-floating-330218035.jpg > sports.jpg
+aws s3 cp sports.jpg s3://ds2022-csg7su/
+aws s3 presign --expires-in 604800 s3://ds2022-csg7su/
+
